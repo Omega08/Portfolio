@@ -1,0 +1,8 @@
+.char {
+  display: inline-block;
+  transform: translateY(-100%);
+}
+
+.whiteSpace {
+  margin: auto 0.1em;
+}

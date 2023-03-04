@@ -1,0 +1,65 @@
+#firstBehind {
+  height: 100%;
+}
+
+#firstOverlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: circle(200px at 50% 50%);
+  transition: clip-path 150ms;
+}
+
+.heading {
+  max-width: fit-content;
+  padding: 1.2em;
+}
+
+#myName > .char:nth-child(1),
+#myName > .char:nth-child(4) {
+  color: red;
+}
+
+#intro {
+  text-align: left;
+  font-family: cursive;
+  font-style: italic;
+}
+
+#myName {
+  font-family: League Gothic, sans-serif;
+  font-size: 3em;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  height: 80%;
+}
+
+.description > p {
+  margin: auto 2em;
+  transform: translateY(-1em);
+  font-size: 250%;
+  font-family: League Gothic, sans-serif;
+}
+
+#boom1,
+#boom2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 1em;
+  font-size: 2em;
+  font-family: League Gothic, sans-serif;
+}
+
+#boom2:hover,
+#boom1:hover {
+  cursor: pointer;
+}

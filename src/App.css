@@ -1,0 +1,37 @@
+section {
+  position: relative;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  visibility: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.page {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.page:nth-child(1) {
+  position: relative;
+}
+
+.page:nth-child(3) {
+  display: flex;
+}
+
+.page:nth-child(4) {
+  display: flex;
+}

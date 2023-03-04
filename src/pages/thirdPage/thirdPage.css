@@ -1,0 +1,113 @@
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  #thirdPageContainer {
+    flex-direction: column;
+  }
+
+  #left2 {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  #right2 {
+    height: 55%;
+    width: 100%;
+  }
+
+  #about {
+    margin: auto;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+
+  #aboutHead {
+    margin: 1rem 1.2rem 0 1.2rem;
+  }
+
+  #about > p::first-letter {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #left2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    height: 100%;
+    width: 50%;
+  }
+
+  #right2 {
+    height: 100%;
+    width: 50%;
+  }
+
+  #about {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.02rem;
+  }
+
+  #aboutHead > p {
+    margin: 2rem 1.2rem 0 1.2rem;
+  }
+
+  #about > p::first-letter {
+    font-size: 2rem;
+  }
+}
+
+#thirdPageContainer {
+  display: flex;
+}
+
+#right2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myBubbleUI {
+  width: 100%;
+  height: 80%;
+  border-radius: 50px;
+}
+
+.logoBubble {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutHead {
+  min-width: 100%;
+  display: flex;
+  font-size: 2.5em;
+  font-family: League Gothic, sans-serif;
+  justify-content: left;
+  align-items: baseline;
+}
+
+#about {
+  min-width: 100%;
+  font-weight: 550;
+  display: grid;
+  place-content: center;
+  text-align: justify;
+}
+
+#about > p::first-letter {
+  color: red;
+}
+
+#about > p {
+  margin: auto 1.2rem;
+}

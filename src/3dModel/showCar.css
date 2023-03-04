@@ -1,0 +1,40 @@
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  #notMine {
+    font-size: 19px;
+    transform: translateX(-5%);
+  }
+
+  #arrow {
+    transform: translateY(18%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #notMine {
+    font-size: 20px;
+    transform: translateY(-30%);
+  }
+}
+
+#here {
+  display: flex;
+  flex-direction: row;
+  transform: translate(25%, -5%);
+}
+
+canvas {
+  cursor: grab;
+}
+
+canvas:active {
+  cursor: grabbing;
+}
+
+#notMine {
+  font-family: "Cabin Sketch";
+  font-style: italic;
+}
+
+#arrow > svg {
+  transform: rotate(140deg);
+}
