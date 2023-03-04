@@ -30,7 +30,6 @@ const ContactPage = () => {
       opacity: 0.4,
     });
     try {
-      console.log(process.env.REACT_APP_SERVER_URL);
       await axios.post(`${process.env.REACT_APP_SERVER_URL}/send-email`, {
         name,
         email,
@@ -49,7 +48,6 @@ const ContactPage = () => {
           fontSize: "1.5rem",
         },
       });
-      console.log("here");
     } catch (error) {
       console.error(error);
       setLoading(false);
