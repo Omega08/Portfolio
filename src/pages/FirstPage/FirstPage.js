@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import AnimatedText from "../../animation/AnimatedText";
+import { useInView } from "react-intersection-observer";
 import { ThemeContext } from "../../ThemeContext";
 import LoadingScreen from "../../loader/LoadingScreen";
 import gsap from "gsap";
@@ -7,6 +8,16 @@ import "./FirstPage.css";
 
 const FirstPage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const [sectionRef, inView] = useInView({
+    /* Optional options */
+    threshold: 0.8,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      document.title = "Welcome!";
+    }
+  }, [inView]);
 
   const moveMouse = (e) => {
     gsap.to("#firstOverlay", {
@@ -45,7 +56,7 @@ const FirstPage = () => {
   };
 
   return (
-    <>
+    <div ref={sectionRef} style={{ height: "100%" }}>
       <div
         style={{ height: "100%", width: "100%" }}
         onMouseMove={(e) => moveMouse(e)}
@@ -94,7 +105,7 @@ const FirstPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -45,7 +45,10 @@ const SecondPage = () => {
   }, []);
 
   useEffect(() => {
-    if (inView) animateIn(".secondLines");
+    if (inView) {
+      animateIn(".secondLines");
+      document.title = "Vroom!";
+    }
   }, [inView]);
 
   useEffect(() => {

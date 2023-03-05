@@ -35,6 +35,10 @@ const LoadingScreen = () => {
   const [str, setStr] = useState("LOADING..");
 
   useEffect(() => {
+    document.title = "Please Wait..";
+  }, []);
+
+  useEffect(() => {
     const timeline = gsap.timeline({
       onComplete: () => {
         index++;

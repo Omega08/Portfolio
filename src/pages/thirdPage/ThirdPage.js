@@ -1,15 +1,25 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../ThemeContext";
 import BubbleUI from "react-bubble-ui";
 import LogoBubble from "./LogoBubble";
 import "react-bubble-ui/dist/index.css";
 import "./thirdPage.css";
+import { useInView } from "react-intersection-observer";
 import AnimatedHead from "../../animation/AnimatedHead";
 
 const ThirdPage = () => {
   let index = 0;
-
   const { theme, setTheme } = useContext(ThemeContext);
+  const [sectionRef, inView] = useInView({
+    /* Optional options */
+    threshold: 0.8,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      document.title = "About Me!";
+    }
+  }, [inView]);
 
   const options = {
     size: 120,
@@ -124,7 +134,7 @@ const ThirdPage = () => {
   ));
 
   return (
-    <div id="thirdPageContainer">
+    <div id="thirdPageContainer" ref={sectionRef}>
       <div
         id="left2"
         style={{

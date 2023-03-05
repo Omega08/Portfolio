@@ -1,4 +1,5 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import { ThemeContext } from "../../ThemeContext";
 import axios from "axios";
 import gsap from "gsap";
@@ -22,6 +23,16 @@ const ContactPage = () => {
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
+  const [sectionRef, inView] = useInView({
+    /* Optional options */
+    threshold: 0.8,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      document.title = "Contact!";
+    }
+  }, [inView]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -67,7 +78,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div id="contactPageContainer">
+    <div id="contactPageContainer" ref={sectionRef}>
       <div
         id="left3"
         style={{
