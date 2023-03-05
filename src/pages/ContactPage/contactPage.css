@@ -12,6 +12,11 @@
     height: 50%;
   }
 
+  #formWrap {
+    /* background-color: red; */
+    gap: 0.6rem;
+  }
+
   #contactWrapper {
     width: 100%;
     padding: 2rem;
@@ -42,10 +47,18 @@
     height: 100%;
   }
 
+  form {
+    transform: translateY(3rem);
+  }
+
   #contactLogo {
     align-self: flex-start;
     margin: 0 2rem;
-    transform: translateY(2.5rem);
+    transform: translateY(5rem);
+  }
+
+  #formWrap {
+    gap: 1.5rem;
   }
 }
 
@@ -125,7 +138,6 @@ textarea:hover {
 #formWrap {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
   width: 70%;
 }
 
@@ -162,6 +174,7 @@ textarea {
 #contactLogo {
   display: flex;
   gap: 3em;
+  height: 4rem;
 }
 
 .logoSvg {
