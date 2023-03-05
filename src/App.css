@@ -9,7 +9,7 @@ section {
 
 .App {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   visibility: hidden;
   overflow-y: hidden;
@@ -21,7 +21,7 @@ section {
 
 .page {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 100%;
 }
 
 .page:nth-child(1) {
