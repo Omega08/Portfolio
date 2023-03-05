@@ -10,7 +10,7 @@ import { Html, useProgress } from "@react-three/drei";
 function Loader() {
   const { progress } = useProgress();
   const { loading, setLoading } = useContext(LoadContext);
-  console.log(progress);
+  // console.log(progress);
   if (progress >= 100) {
     const timeline = gsap.timeline();
     timeline

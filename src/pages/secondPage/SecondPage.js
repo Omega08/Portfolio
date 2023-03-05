@@ -29,16 +29,6 @@ const SecondPage = () => {
     });
   };
 
-  const animateOut = (el) => {
-    gsap.to(el, {
-      yPercent: 100,
-      opacity: 0,
-      ease: "power2.out",
-      duration: 0.5,
-      stagger: 0.1,
-    });
-  };
-
   const [sectionRef, inView] = useInView({
     /* Optional options */
     threshold: 0.8,
@@ -55,11 +45,7 @@ const SecondPage = () => {
   }, []);
 
   useEffect(() => {
-    if (inView) {
-      animateIn(".secondLines");
-    } else {
-      animateOut(".secondLines");
-    }
+    if (inView) animateIn(".secondLines");
   }, [inView]);
 
   useEffect(() => {
