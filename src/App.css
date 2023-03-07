@@ -2,6 +2,12 @@ section {
   position: relative;
 }
 
+[contenteditable] ~ grammarly-extension,
+input ~ grammarly-extension,
+textarea ~ grammarly-extension {
+  display: none;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .App::-webkit-scrollbar {
   display: none;

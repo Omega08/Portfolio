@@ -14,7 +14,7 @@ const AnimatedLogo = ({ children, strokeColor, hoverId, fillColor, link }) => {
       <div style={{ position: "absolute", transform: "translate(-11%, -10%)" }}>
         <svg
           style={{
-            height: "2rem",
+            height: "zrem",
             width: "2rem",
             overflow: "visible",
           }}
