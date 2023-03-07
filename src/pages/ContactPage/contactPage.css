@@ -12,6 +12,10 @@
     height: 50%;
   }
 
+  #gic {
+    margin-top: 1rem;
+  }
+
   #formWrap {
     /* background-color: red; */
     gap: 0.6rem;
@@ -25,7 +29,6 @@
   #contactLogo {
     align-self: flex-end;
     margin: 0 2rem;
-    transform: translateY(-1rem);
   }
 }
 
@@ -115,9 +118,9 @@
 }
 
 #contactForm > form {
-  margin-top: 2rem;
   width: 95%;
   height: 60%;
+  margin-top: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;

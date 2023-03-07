@@ -11,10 +11,17 @@ const AnimatedLogo = ({ children, strokeColor, hoverId, fillColor, link }) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <div style={{ position: "absolute", transform: "translate(-11%, -10%)" }}>
+      <div
+        style={{
+          position: "absolute",
+          height: "2rem",
+          transform: "translate(-11%, -10%)",
+        }}
+      >
         <svg
           style={{
-            height: "zrem",
+            position: "absolute",
+            height: "2rem",
             width: "2rem",
             overflow: "visible",
           }}
